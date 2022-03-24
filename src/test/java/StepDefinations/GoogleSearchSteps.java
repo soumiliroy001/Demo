@@ -11,8 +11,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class GoogleSearchSteps {
+
+public GoogleSearchSteps(){}
 	
-	WebDriver driver;
+	WebDriver driver1;
 	String url="https://www.google.com/";
 	WebElement search;
 	@Given("Browser is open")
@@ -34,6 +36,11 @@ public class GoogleSearchSteps {
 	@And("hits enter")
 	public void hits_enter() {
 	  search.sendKeys(Keys.ENTER);
+	}
+
+	@Then("User is navigate to search result")
+	public void user_is_navigate_to_search_result() {
+	    
 	}
 
 	@Then("User is navigate to search result")
